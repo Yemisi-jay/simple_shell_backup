@@ -1,1 +1,1 @@
-Yemisi and Emmanuel simple shell project
+This is readme file for Smple shell
