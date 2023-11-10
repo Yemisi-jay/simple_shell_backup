@@ -5,7 +5,7 @@ ssize_t get_new_len(char *line);
 void logical_ops(char *line, ssize_t *new_len);
 
 /**
- * handle_line - function that separate a line read from standard
+ * handle_line - this function that separate a line read from standard
  *	input as needed
  * @line: the pointer to a line read from standard input
  * @read: returns the length of line
