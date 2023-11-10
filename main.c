@@ -27,7 +27,7 @@ void signal_handler(int sign)
 int execute(char **args, char **front)
 {
 	pid_t child_pid;
-	int status, flag = 0, ret = 0;
+	int stats, flag = 0, ret = 0;
 	char *command = args[0];
 
 	if (command[0] != '/' && command[0] != '.')
@@ -65,8 +65,8 @@ int execute(char **args, char **front)
 		}
 		else
 		{
-			wait(&status);
-			ret = WEXITSTATUS(status);
+			wait(&stats);
+			ret = WEXITSTATUS(stats);
 		}
 	}
 	if (flag)
