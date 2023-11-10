@@ -5,12 +5,13 @@ ssize_t get_new_len(char *line);
 void logical_ops(char *line, ssize_t *new_len);
 
 /**
- * handle_line - Partitions a line read from standard input as needed.
- * @line: A pointer to a line read from standard input.
- * @read: The length of line.
+ * handle_line - function that separate a line read from standard
+ *	input as needed
+ * @line: the pointer to a line read from standard input
+ * @read: returns the length of line
  *
- * Description: Spaces are inserted to separate ";", "||", and "&&".
- *              Replaces "#" with '\0'.
+ * Description: Spaces are inserted to separate ";", "||", and "&&"
+ *              replaces "#" with '\0'
  */
 void handle_line(char **line, ssize_t read)
 {
@@ -96,13 +97,13 @@ void handle_line(char **line, ssize_t read)
 }
 
 /**
- * get_new_len - Gets the new length of a line partitioned
- *               by ";", "||", "&&&", or "#".
- * @line: The line to check.
+ * get_new_len - function that gets the new length of a line partitioned
+ *               by ";", "||", "&&&", or "#"
+ * @line: The line be to checked
  *
- * Return: The new length of the line.
+ * Return: return the new length of the line
  *
- * Description: Cuts short lines containing '#' comments with '\0'.
+ * Description: Cuts short lines containing '#' comments with '\0'
  */
 
 ssize_t get_new_len(char *line)
@@ -157,9 +158,10 @@ ssize_t get_new_len(char *line)
 	return (new_len);
 }
 /**
- * logical_ops - Checks a line for logical operators "||" or "&&".
- * @line: A pointer to the character to check in the line.
- * @new_len: Pointer to new_len in get_new_len function.
+ * logical_ops - function that searches a line for logical
+ *	operators "||" or "&&"
+ * @line: the pointer to the char to check in the line
+ * @new_len: Pointer to new_len in get_new_len function
  */
 void logical_ops(char *line, ssize_t *new_len)
 {
