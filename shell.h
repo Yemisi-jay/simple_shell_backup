@@ -103,7 +103,7 @@ int shellby_help(char **args, char __attribute__((__unused__)) **front);
 
 /* Builtin Helpers */
 char **_copyenv(void);
-void free_env(void);
+void free_environ(void);
 char **_getenv(const char *var);
 
 /* Error Handling */

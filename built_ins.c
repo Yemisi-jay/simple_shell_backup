@@ -73,7 +73,7 @@ int shellby_exit(char **args, char **front)
 		return (create_error(--args, 2));
 	args -= 1;
 	free_args(args, front);
-	free_env();
+	free_environ();
 	free_alias_list(aliases);
 	exit(num);
 }
