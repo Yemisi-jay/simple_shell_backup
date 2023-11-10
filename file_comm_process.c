@@ -97,7 +97,7 @@ int proc_file_commands(char *file_path, int *exe_ret)
 	free(line);
 	if (!args)
 		return (0);
-	if (check_args(args) != 0)
+	if (args_checker(args) != 0)
 	{
 		*exe_ret = 2;
 		free_args(args, args);
