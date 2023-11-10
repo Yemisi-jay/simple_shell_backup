@@ -1,18 +1,18 @@
 #include "shell.h"
 
-void sig_handler(int sig);
+void signal_handler(int sign);
 int execute(char **args, char **front);
 
 /**
- * sig_handler - Prints a new prompt upon a signal.
- * @sig: The signal.
+ * signal_handler - Prints a new prompt upon a signal.
+ * @sign: The signal.
  */
-void sig_handler(int sig)
+void signal_handler(int sign)
 {
 	char *new_prompt = "\n$ ";
 
-	(void)sig;
-	signal(SIGINT, sig_handler);
+	(void)sign;
+	signal(SIGINT, signal_handler);
 	write(STDIN_FILENO, new_prompt, 3);
 }
 
@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
 	name = argv[0];
 	hist = 1;
 	aliases = NULL;
-	signal(SIGINT, sig_handler);
+	signal(SIGINT, signal_handler);
 
 	*exe_ret = 0;
 	environ = _copyenv();
