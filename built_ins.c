@@ -174,7 +174,7 @@ int shellby_help(char **args, char __attribute__((__unused__)) **front)
 	if (!args[0])
 		all_help();
 	else if (_strcmp(args[0], "alias") == 0)
-		help_alias();
+		alias_help();
 	else if (_strcmp(args[0], "cd") == 0)
 		help_cd();
 	else if (_strcmp(args[0], "exit") == 0)

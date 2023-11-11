@@ -1,7 +1,7 @@
 #include "shell.h"
 
 void all_help(void);
-void help_alias(void);
+void alias_help(void);
 void help_cd(void);
 void help_exit(void);
 void help_help(void);
@@ -29,10 +29,10 @@ void all_help(void)
 }
 
 /**
- * help_alias - function that displays info on the shellby builtin
+ * alias_help - function that displays info on the shellby builtin
  *		command 'alias'
  */
-void help_alias(void)
+void alias_help(void)
 {
 	char *msg = "alias: alias [NAME[='VALUE'] ...]\n\tHandles aliases.\n";
 

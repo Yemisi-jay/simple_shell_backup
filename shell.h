@@ -123,7 +123,7 @@ list_t *add_node_end(list_t **head, char *dir);
 void free_list(list_t *head);
 
 void all_help(void);
-void help_alias(void);
+void alias_help(void);
 void help_cd(void);
 void help_exit(void);
 void help_help(void);
