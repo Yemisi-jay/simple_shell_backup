@@ -3,7 +3,7 @@
 void all_help(void);
 void alias_help(void);
 void cd_help(void);
-void help_exit(void);
+void exit_help(void);
 void help_help(void);
 
 /**
@@ -73,9 +73,9 @@ void cd_help(void)
 }
 
 /**
- * help_exit - displays information on the shellby builtin command 'exit'
+ * exit_help - displays information on the shellby builtin command 'exit'
  */
-void help_exit(void)
+void exit_help(void)
 {
 	char *msg = "exit: exit [STATUS]\n\tExits the shell.\n\n\tThe ";
 
