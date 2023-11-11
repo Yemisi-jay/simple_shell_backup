@@ -72,7 +72,7 @@ int shellby_exit(char **args, char **front)
 	if (num > max - 1)
 		return (create_error(--args, 2));
 	args -= 1;
-	free_args(args, front);
+	args_free(args, front);
 	free_environ();
 	free_alias_list(aliases);
 	exit(num);

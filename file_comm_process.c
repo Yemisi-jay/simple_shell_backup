@@ -100,7 +100,7 @@ int proc_file_commands(char *file_path, int *exe_ret)
 	if (args_checker(args) != 0)
 	{
 		*exe_ret = 2;
-		free_args(args, args);
+		args_free(args, args);
 		return (*exe_ret);
 	}
 	front = args;

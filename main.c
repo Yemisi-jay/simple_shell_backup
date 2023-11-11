@@ -59,7 +59,7 @@ int execute(char **args, char **front)
 			if (errno == EACCES)
 				ret = (create_error(args, 126));
 			free_environ();
-			free_args(args, front);
+			args_free(args, front);
 			free_alias_list(aliases);
 			_exit(ret);
 		}

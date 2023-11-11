@@ -78,7 +78,7 @@ int args_calls(char **args, char **front, int *exe_ret);
 int run_args(char **args, char **front, int *exe_ret);
 int args_handler(int *exe_ret);
 int args_checker(char **args);
-void free_args(char **args, char **front);
+void args_free(char **args, char **front);
 char **replace_aliases(char **args);
 
 /* String functions */
