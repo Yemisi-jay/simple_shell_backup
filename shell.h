@@ -124,7 +124,7 @@ void free_list(list_t *head);
 
 void all_help(void);
 void alias_help(void);
-void help_cd(void);
+void cd_help(void);
 void help_exit(void);
 void help_help(void);
 void help_env(void);

@@ -2,7 +2,7 @@
 
 void all_help(void);
 void alias_help(void);
-void help_cd(void);
+void cd_help(void);
 void help_exit(void);
 void help_help(void);
 
@@ -52,10 +52,10 @@ void alias_help(void)
 }
 
 /**
- * help_cd - function that displays information on the shellby builtin
+ * cd_help - function that displays information on the shellby builtin
  *		command 'cd'
  */
-void help_cd(void)
+void cd_help(void)
 {
 	char *msg = "cd: cd [DIRECTORY]\n\tChanges the current directory of the";
 
