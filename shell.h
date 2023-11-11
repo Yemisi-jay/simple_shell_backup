@@ -127,8 +127,8 @@ void alias_help(void);
 void cd_help(void);
 void exit_help(void);
 void help_help(void);
-void help_env(void);
-void help_setenv(void);
+void environ_help(void);
+void setenv_help(void);
 void help_unsetenv(void);
 void help_history(void);
 
