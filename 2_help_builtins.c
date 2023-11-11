@@ -2,7 +2,7 @@
 
 void environ_help(void);
 void setenv_help(void);
-void help_unsetenv(void);
+void unsetenv_help(void);
 void help_history(void);
 
 /**
@@ -30,10 +30,10 @@ void setenv_help(void)
 }
 
 /**
- * help_unsetenv - function that displays info on shellby builtin command
+ * unsetenv_help - function that displays info on shellby builtin command
  * 'unsetenv'
  */
-void help_unsetenv(void)
+void unsetenv_help(void)
 {
 	char *msg = "unsetenv: unsetenv [VARIABLE]\n\tRemoves an ";
 

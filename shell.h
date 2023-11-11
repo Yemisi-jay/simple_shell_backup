@@ -129,7 +129,7 @@ void exit_help(void);
 void help_help(void);
 void environ_help(void);
 void setenv_help(void);
-void help_unsetenv(void);
+void unsetenv_help(void);
 void help_history(void);
 
 int proc_file_commands(char *file_path, int *exe_ret);

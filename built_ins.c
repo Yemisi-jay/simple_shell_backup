@@ -184,7 +184,7 @@ int shellby_help(char **args, char __attribute__((__unused__)) **front)
 	else if (_strcmp(args[0], "setenv") == 0)
 		setenv_help();
 	else if (_strcmp(args[0], "unsetenv") == 0)
-		help_unsetenv();
+		unsetenv_help();
 	else if (_strcmp(args[0], "help") == 0)
 		help_help();
 	else
