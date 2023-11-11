@@ -13,29 +13,29 @@ int proc_file_commands(char *file_path, int *exe_ret);
 
 int cant_open(char *file_path)
 {
-	char *error, *hist_str;
+	char *error, *str_hist;
 	int len;
 
-	hist_str = _itoa(hist);
-	if (!hist_str)
+	str_hist = _itoa(hist);
+	if (!str_hist)
 		return (127);
 
-	len = _strlen(name) + _strlen(hist_str) + _strlen(file_path) + 16;
+	len = _strlen(name) + _strlen(str_hist) + _strlen(file_path) + 16;
 	error = malloc(sizeof(char) * (len + 1));
 	if (!error)
 	{
-		free(hist_str);
+		free(str_hist);
 		return (127);
 	}
 
 	_strcpy(error, name);
 	_strcat(error, ": ");
-	_strcat(error, hist_str);
+	_strcat(error, str_hist);
 	_strcat(error, ": Can't open ");
 	_strcat(error, file_path);
 	_strcat(error, "\n");
 
-	free(hist_str);
+	free(str_hist);
 	write(STDERR_FILENO, error, len);
 	free(error);
 	return (127);

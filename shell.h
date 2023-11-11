@@ -73,9 +73,9 @@ char *_itoa(int num);
 /* Input Helpers */
 void handle_line(char **line, ssize_t read);
 void variable_replacement(char **args, int *exe_ret);
-char *get_args(char *line, int *exe_ret);
+char *args_get(char *line, int *exe_ret);
 int args_calls(char **args, char **front, int *exe_ret);
-int run_args(char **args, char **front, int *exe_ret);
+int args_run(char **args, char **front, int *exe_ret);
 int args_handler(int *exe_ret);
 int args_checker(char **args);
 void args_free(char **args, char **front);
@@ -122,7 +122,7 @@ void free_alias_list(alias_t *head);
 list_t *add_node_end(list_t **head, char *dir);
 void free_list(list_t *head);
 
-void help_all(void);
+void all_help(void);
 void help_alias(void);
 void help_cd(void);
 void help_exit(void);

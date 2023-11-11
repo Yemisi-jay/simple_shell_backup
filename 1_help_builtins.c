@@ -1,15 +1,15 @@
 #include "shell.h"
 
-void help_all(void);
+void all_help(void);
 void help_alias(void);
 void help_cd(void);
 void help_exit(void);
 void help_help(void);
 
 /**
- * help_all - function that displays all possible builtin shellby commands
+ * all_help - function that displays all possible builtin shellby commands
  */
-void help_all(void)
+void all_help(void)
 {
 	char *msg = "Shellby\nThese shell commands are defined internally.\n";
 
