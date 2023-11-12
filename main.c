@@ -17,12 +17,12 @@ void signal_handler(int sign)
 }
 
 /**
- * execute - Executes a command in a child process.
- * @args: An array of arguments.
- * @front: A double pointer to the beginning of args.
+ * execute - function that executes a child process
+ * @args: An array of args
+ * @front: A double pointer to the beginning of arguments
  *
- * Return: If an error occurs - a corresponding error code.
- *         O/w - The exit value of the last executed command.
+ * Return: If an error occurs - a corresponding error code
+ *         O/w - The exit value of the last executed command
  */
 int execute(char **args, char **front)
 {
@@ -75,11 +75,11 @@ int execute(char **args, char **front)
 }
 
 /**
- * main - Runs a simple UNIX command interpreter.
- * @argc: The number of arguments supplied to the program.
- * @argv: An array of pointers to the arguments.
+ * main - this function runs a simple UNIX command interpreter
+ * @argc: The number of args supplied to the program
+ * @argv: An array of pointers to the args
  *
- * Return: The return value of the last executed command.
+ * Return: The return value of the last executed command
  */
 int main(int argc, char *argv[])
 {
