@@ -5,13 +5,13 @@ int tokens_count(char *str, char *delim_char);
 char **_strtok(char *line, char *delim_char);
 
 /**
- * len_token - Locates the delimiter index marking the end
- *             of the first token contained within a string.
- * @str: The string to be searched.
- * @delim_char: The delimiter character.
+ * len_token - function that locates the delimiter index marking the end
+ *             of the first token contained within a string
+ * @str: The string to be search for
+ * @delim_char: The delimiter character
  *
  * Return: The delimiter index marking the end of
- *         the intitial token pointed to be str.
+ *         the intitial token pointed to be str
  */
 int len_token(char *str, char *delim_char)
 {
@@ -27,12 +27,12 @@ int len_token(char *str, char *delim_char)
 }
 
 /**
- * tokens_count - Counts the number of delimited
- *                words contained within a string.
- * @str: The string to be searched.
- * @delim_char: The delimiter character.
+ * tokens_count - this func counts the number of delimited
+ *                words contained within a string
+ * @str: The string to be searched for in the lines
+ * @delim_char: The delimiter character
  *
- * Return: The number of words contained within str.
+ * Return: The number of words contained within string
  */
 int tokens_count(char *str, char *delim_char)
 {
@@ -54,11 +54,11 @@ int tokens_count(char *str, char *delim_char)
 }
 
 /**
- * _strtok - Tokenizes a string.
- * @line: The string.
- * @delim_char: The delimiter character to tokenize the string by.
+ * _strtok - this tokenizes a string
+ * @line: The string
+ * @delim_char: The delimiter character to tokenize the string by
  *
- * Return: A pointer to an array containing the tokenized words.
+ * Return: this is a pointer to an array containing the tokenized words
  */
 char **_strtok(char *line, char *delim_char)
 {
