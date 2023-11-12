@@ -35,7 +35,7 @@ char *get_location(char *command)
 
 		if (stat(temp, &st) == 0)
 		{
-			free_list(head);
+			list_free(head);
 			return (temp);
 		}
 
@@ -43,7 +43,7 @@ char *get_location(char *command)
 		free(temp);
 	}
 
-	free_list(head);
+	list_free(head);
 
 	return (NULL);
 }
@@ -128,7 +128,7 @@ list_t *get_path_dir(char *path)
 	{
 		if (add_node_end(&head, dirs[index]) == NULL)
 		{
-			free_list(head);
+			list_free(head);
 			free(dirs);
 			return (NULL);
 		}

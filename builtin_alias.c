@@ -135,7 +135,7 @@ char **replace_aliases(char **args)
 				new_value = malloc(sizeof(char) * (_strlen(temp->value) + 1));
 				if (!new_value)
 				{
-					free_args(args, args);
+					args_free(args, args);
 					return (NULL);
 				}
 				_strcpy(new_value, temp->value);

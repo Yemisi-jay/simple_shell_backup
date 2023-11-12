@@ -72,7 +72,7 @@ int shellby_exit(char **args, char **front)
 	if (num > max - 1)
 		return (create_error(--args, 2));
 	args -= 1;
-	free_args(args, front);
+	args_free(args, front);
 	free_environ();
 	free_alias_list(aliases);
 	exit(num);
@@ -172,19 +172,19 @@ int shellby_cd(char **args, char __attribute__((__unused__)) **front)
 int shellby_help(char **args, char __attribute__((__unused__)) **front)
 {
 	if (!args[0])
-		help_all();
+		all_help();
 	else if (_strcmp(args[0], "alias") == 0)
-		help_alias();
+		alias_help();
 	else if (_strcmp(args[0], "cd") == 0)
-		help_cd();
+		cd_help();
 	else if (_strcmp(args[0], "exit") == 0)
-		help_exit();
+		exit_help();
 	else if (_strcmp(args[0], "env") == 0)
-		help_env();
+		environ_help();
 	else if (_strcmp(args[0], "setenv") == 0)
-		help_setenv();
+		setenv_help();
 	else if (_strcmp(args[0], "unsetenv") == 0)
-		help_unsetenv();
+		unsetenv_help();
 	else if (_strcmp(args[0], "help") == 0)
 		help_help();
 	else

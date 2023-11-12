@@ -67,18 +67,18 @@ char **_strtok(char *line, char *delim);
 char *get_location(char *command);
 list_t *get_path_dir(char *path);
 int execute(char **args, char **front);
-void free_list(list_t *head);
+void list_free(list_t *head);
 char *_itoa(int num);
 
 /* Input Helpers */
 void handle_line(char **line, ssize_t read);
 void variable_replacement(char **args, int *exe_ret);
-char *get_args(char *line, int *exe_ret);
+char *args_get(char *line, int *exe_ret);
 int args_calls(char **args, char **front, int *exe_ret);
-int run_args(char **args, char **front, int *exe_ret);
+int args_run(char **args, char **front, int *exe_ret);
 int args_handler(int *exe_ret);
 int args_checker(char **args);
-void free_args(char **args, char **front);
+void args_free(char **args, char **front);
 char **replace_aliases(char **args);
 
 /* String functions */
@@ -120,16 +120,16 @@ char *error_127(char **args);
 alias_t *add_alias_end(alias_t **head, char *name, char *value);
 void free_alias_list(alias_t *head);
 list_t *add_node_end(list_t **head, char *dir);
-void free_list(list_t *head);
+void list_free(list_t *head);
 
-void help_all(void);
-void help_alias(void);
-void help_cd(void);
-void help_exit(void);
+void all_help(void);
+void alias_help(void);
+void cd_help(void);
+void exit_help(void);
 void help_help(void);
-void help_env(void);
-void help_setenv(void);
-void help_unsetenv(void);
+void environ_help(void);
+void setenv_help(void);
+void unsetenv_help(void);
 void help_history(void);
 
 int proc_file_commands(char *file_path, int *exe_ret);
