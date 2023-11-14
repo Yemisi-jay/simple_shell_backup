@@ -108,7 +108,7 @@ int main(int argc, char *argv[])
 	if (!isatty(STDIN_FILENO))
 	{
 		while (ret != END_OF_FILE && ret != EXIT)
-			ret = handle_args(exe_ret);
+			ret = args_handler(exe_ret);
 		free_environ();
 		free_alias_list(aliases);
 		return (*exe_ret);
